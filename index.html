@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>小瑪莉</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no , initial-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/jquery-3.2.1.js"></script>
+	<script src="js/spin.js"></script>
+</head>
+<body>
+	<div class="teach">
+		<div class="teach-box">
+			<div class="close">X</div>
+			<p>请于下方按钮点击下注，中所对应图是小图为2分乘以注数，大图为所对应分数乘以注数，若中一次更会清除另一半边下注数，保留同边的注数，保留注数不耗费金币元宝，曾经更多状况下可另外加注，但会扣除加注部分金币元宝，每局结束若想改下注数量请先按得分即可，得分或下注会自动将赢得数量加至元宝，若有中注可继续比大小，猜中大小分数乘以二，没中则归零。</p>
+		</div>
+	</div>
+
+<div class="loading">
+	<div class="loading-img">
+		<img src="image/loading-logo.jpg" alt="">
+	</div>
+	  <div class="progress-bar">Loading...</div>
+</div>
+
+	<div class="header">
+		<div class="container">
+			<div class="top clearfix">
+				<div class="col-2">
+					<img src="image/head.png" alt="" class="get-img">
+				</div>
+
+				<div class="col-5 coin-box">
+					<img src="image/gold-mode.jpg" alt="" class="gold-mode">
+					<img src="image/top-coin.png" class="coin-img" alt="">
+					<span class="coin-num">100</span>
+				</div>
+
+				<div class="col-5 gold">
+					<img src="image/coin-mode.jpg" alt="" class="coin-mode">
+					<img src="image/gold.png" class="gold-img" alt="">
+					<div class="right">
+						<span class="gold-num">100</span>
+						<img src="image/gold-add.png" class="gold-add" alt="">
+					</div>
+				</div>
+				
+				<div class="top-score clearfix">
+					<div class="total">
+						<div class="total-num">
+							<img src="image/0.png" alt="">
+							<img src="image/dark-8.png" alt="">
+							<img src="image/dark-8.png" alt="">
+							<img src="image/dark-8.png" alt="">
+							<img src="image/dark-8.png" alt="">
+							<img src="image/dark-8.png" alt="">
+							<img src="image/dark-8.png" alt="">
+							<img src="image/dark-8.png" alt="">
+							<img src="image/dark-8.png" alt="">
+							<img src="image/dark-8.png" alt="">
+							<img src="image/dark-8.png" alt="">
+							<img src="image/dark-8.png" alt="">
+						</div>
+					</div>
+
+					<div class="win">
+						<div class="win-num">
+							<img src="image/0.png" alt="">
+							<img src="image/dark-8.png" alt="">
+							<img src="image/dark-8.png" alt="">
+							<img src="image/dark-8.png" alt="">
+							<img src="image/dark-8.png" alt="">
+							<img src="image/dark-8.png" alt="">
+							<img src="image/dark-8.png" alt="">
+							<img src="image/dark-8.png" alt="">
+							<img src="image/dark-8.png" alt="">
+							<img src="image/dark-8.png" alt="">
+							<img src="image/dark-8.png" alt="">
+							<img src="image/dark-8.png" alt="">
+						</div>
+					</div>
+					<div class="description">
+						<img src="image/description.png" alt="">
+					</div>
+				</div>
+			</div>
+			
+
+			<div class="integral">
+				<img src="image/integral.png" alt="">
+				<div class="integral-num">9487</div>
+			</div>
+		</div>
+	</div>
+
+	
+	<div class="center">
+		<div class="light-left">
+			<img src="image/light1.png" alt="">
+		</div>
+
+		<div class="light-right">
+			<img src="image/light1.png" alt="">
+		</div>
+		<div class="tr1 clearfix">
+			<div class="fix-box">
+				<div id="0" class="flag">
+					<img src="image/light-dark.png" alt="">
+					<img src="image/flag-big-dark.png" alt="">
+					<img src="image/flag-big.png" alt="">
+					<img src="image/flag-big-blue.png" alt="">
+					<img src="image/flag-big-green.png" alt="">
+					<img src="image/flag-big-pink.png" alt="">
+					<img src="image/flag-big-red.png" alt="">
+				</div>
+			</div>
+			
+			<div class="fix-box">
+				<div id="1" class="rudder">
+					<img src="image/light-dark.png" alt="">
+					<img src="image/rudder-big-dark.png" alt="">
+					<img src="image/rudder-big.png" alt="">
+					<img src="image/rudder-big-blue.png" alt="">
+					<img src="image/rudder-big-green.png" alt="">
+					<img src="image/rudder-big-pink.png" alt="">
+					<img src="image/rudder-big-red.png" alt="">
+				</div>
+			</div>
+			
+			<div class="fix-box">
+				<div id="2" class="bar50">
+					<img src="image/light-dark.png" alt="">
+					<img src="image/bar-50-dark.png" alt="">
+					<img src="image/bar-50.png" alt="">
+					<img src="image/bar-50-blue.png" alt="">
+					<img src="image/bar-50-green.png" alt="">
+					<img src="image/bar-50-pink.png" alt="">
+					<img src="image/bar-50-red.png" alt="">
+				</div>
+			</div>
+			
+			<div class="fix-box">
+				<div id="3" class="bar100">
+					<img src="image/light-dark.png" alt="">
+					<img src="image/bar-100-dark.png" alt="">
+					<img src="image/bar-100.png" alt="">
+					<img src="image/bar-100-blue.png" alt="">
+					<img src="image/bar-100-green.png" alt="">
+					<img src="image/bar-100-pink.png" alt="">
+					<img src="image/bar-100-red.png" alt="">
+				</div>
+			</div>
+			
+			<div class="fix-box">
+				<div id="4" class="bomb">
+					<img src="image/light-dark.png" alt="">
+					<img src="image/bomb-big-dark.png" alt="">
+					<img src="image/bomb-big.png" alt="">
+					<img src="image/bomb-big-blue.png" alt="">
+					<img src="image/bomb-big-green.png" alt="">
+					<img src="image/bomb-big-pink.png" alt="">
+					<img src="image/bomb-big-red.png" alt="">
+				</div>
+			</div>
+			
+			<div class="fix-box">
+				<div id="5" class="bomb-small">
+						<img src="image/light-dark.png" alt="">
+						<img src="image/bomb-small-dark.png" alt="">
+						<img src="image/bomb-small.png" alt="">
+						<img src="image/bomb-small-blue.png" alt="">
+						<img src="image/bomb-small-green.png" alt="">
+						<img src="image/bomb-small-pink.png" alt="">
+						<img src="image/bomb-small-red.png" alt="">
+				</div>
+			</div>
+			
+			<div class="fix-box">
+				<div id="6" class="barrels">
+					<img src="image/light-dark.png" alt="">
+					<img src="image/Barrels-big-dark.png" alt="">
+					<img src="image/Barrels-big.png" alt="">
+					<img src="image/Barrels-big-blue.png" alt="">
+					<img src="image/Barrels-big-green.png" alt="">
+					<img src="image/Barrels-big-pink.png" alt="">
+					<img src="image/Barrels-big-red.png" alt="">
+				</div>
+			</div>
+		</div>
+		
+		<div class="center-box clearfix">
+			<div class="tr2 clearfix">
+				<div class="fix-box">
+					<div id="23" class="rudder-small">
+						<img src="image/light-dark.png" alt="">
+						<img src="image/rudder-small-dark.png" alt="">
+						<img src="image/rudder-small.png" alt="">
+						<img src="image/rudder-small-blue.png" alt="">
+						<img src="image/rudder-small-green.png" alt="">
+						<img src="image/rudder-small-pink.png" alt="">
+						<img src="image/rudder-small-red.png" alt="">
+					</div>
+				</div>
+				
+				<div class="fix-box">
+					<div id="22" class="bomb">
+						<img src="image/light-dark.png" alt="">
+						<img src="image/bomb-big-dark.png" alt="">
+						<img src="image/bomb-big.png" alt="">
+						<img src="image/bomb-big-blue.png" alt="">
+						<img src="image/bomb-big-green.png" alt="">
+						<img src="image/bomb-big-pink.png" alt="">
+						<img src="image/bomb-big-red.png" alt="">
+					</div>
+				</div>
+				
+				<div class="fix-box">
+					<div id="21" class="once-more-left">
+						<img src="image/light-dark.png" alt="">
+						<img src="image/once-more-dark.png" alt="">
+						<img src="image/once-more.png" alt="">
+						<img src="image/once-more-blue.png" alt="">
+						<img src="image/once-more-green.png" alt="">
+						<img src="image/once-more-pink.png" alt="">
+						<img src="image/once-more-red.png" alt="">
+					</div>
+				</div>
+				
+				<div class="fix-box">
+					<div id="20" class="box-big">
+						<img src="image/light-dark.png" alt="">
+						<img src="image/box-big-dark.png" alt="">
+						<img src="image/box-big.png" alt="">
+						<img src="image/box-big-blue.png" alt="">
+						<img src="image/box-big-green.png" alt="">
+						<img src="image/box-big-pink.png" alt="">
+						<img src="image/box-big-red.png" alt="">
+					</div>
+				</div>
+				 
+				<div class="fix-box">
+					<div id="19" class="box-small">
+						<img src="image/light-dark.png" alt="">
+						<img src="image/box-small-dark.png" alt="">
+						<img src="image/box-small.png" alt="">
+						<img src="image/box-small-blue.png" alt="">
+						<img src="image/box-small-green.png" alt="">
+						<img src="image/box-small-pink.png" alt="">
+						<img src="image/box-small-red.png" alt="">
+					</div>
+				</div>
+			</div>
+
+			<div class="tr3 clearfix">
+				<div class="center-td">	 
+					<div>
+						<img src="image/comp/0.jpg" class="first" alt="">
+					</div>
+					<div class="win-coin-img">
+						<img src="image/GOLD01.png" alt="">
+						<img src="image/GOLD02.png" alt="" class="fake-img">
+					</div>
+					<div class="img-box">
+					<img src="image/comp/1.jpg" alt="">
+					<img src="image/comp/2.jpg" alt="">
+					<img src="image/comp/3.jpg" alt="">
+					<img src="image/comp/4.jpg" alt="">
+					<img src="image/comp/5.jpg" alt="">
+					<img src="image/comp/6.jpg" alt="">
+					<img src="image/comp/7.jpg" alt="">
+					<img src="image/comp/8.jpg" alt="">
+					<img src="image/comp/9.jpg" alt="">
+					<img src="image/comp/10.jpg" alt="">
+					<img src="image/comp/11.jpg" alt="">
+					<img src="image/comp/12.jpg" alt="">
+					<img src="image/comp/13.jpg" alt="">
+					<img src="image/comp/14.jpg" alt="">
+					<img src="image/comp/15.jpg" alt="">
+					<img src="image/comp/16.jpg" alt="">
+					<img src="image/comp/17.jpg" alt="">
+					<img src="image/comp/18.jpg" alt="">
+					<img src="image/comp/19.jpg" alt="">
+					<img src="image/comp/20.jpg" alt="">
+					<img src="image/comp/21.jpg" alt="">
+					<img src="image/comp/22.jpg" alt="">
+					<img src="image/comp/23.jpg" alt="">
+					<img src="image/comp/24.jpg" alt="">
+					<img src="image/comp/25.jpg" alt="">
+					<img src="image/comp/26.jpg" alt="">
+					<img src="image/comp/27.jpg" alt="">
+					<img src="image/comp/28.jpg" alt="">
+					<img src="image/comp/29.jpg" alt="">
+					<img src="image/comp/30.jpg" alt="">
+					<img src="image/comp/31.jpg" alt="">
+					<img src="image/comp/32.jpg" alt="">
+					<img src="image/comp/33.jpg" alt="">
+					<img src="image/comp/34.jpg" alt="">
+					<img src="image/comp/35.jpg" alt="">
+					<img src="image/comp/36.jpg" alt="">
+					<img src="image/comp/37.jpg" alt="">
+					<img src="image/comp/38.jpg" alt="">
+					<img src="image/comp/39.jpg" alt="">
+					<img src="image/comp/40.jpg" alt="">
+					<img src="image/comp/41.jpg" alt="">
+					<img src="image/comp/42.jpg" alt="">
+					<img src="image/comp/43.jpg" alt="">
+					<img src="image/comp/44.jpg" alt="">
+					<img src="image/comp/45.jpg" alt="">
+					<img src="image/comp/46.jpg" alt="">
+					<img src="image/comp/47.jpg" alt="">
+					<img src="image/comp/48.jpg" alt="">
+					<img src="image/comp/49.jpg" alt="">
+					<img src="image/comp/50.jpg" alt="">
+					<img src="image/comp/51.jpg" alt="">
+					<img src="image/comp/52.jpg" alt="">
+					<img src="image/comp/53.jpg" alt="">
+					<img src="image/comp/54.jpg" alt="">
+					<img src="image/comp/55.jpg" alt="">
+					<img src="image/comp/56.jpg" alt="">
+					<img src="image/comp/57.jpg" alt="">
+					<img src="image/comp/58.jpg" alt="">
+					<img src="image/comp/59.jpg" alt="">
+					</div>
+					
+					<div class="box">
+						<div class="wrap clearfix">
+							<div class="count-num">
+								<img src="image/dark-8.png" class="num1" alt="">
+								<img src="image/0.png" class="num2" alt="">
+							</div>
+							<img src="image/light-dark.png" id="left-dimaond" alt="">
+							<img src="image/light-dark.png" id="right-dimaond" alt="">
+						</div>
+					</div>
+
+					<div class="win-img">
+						<img src="image/winner/0.jpg" alt="">
+						<img src="image/winner/1.jpg" alt="">
+						<img src="image/winner/2.jpg" alt="">
+						<img src="image/winner/3.jpg" alt="">
+						<img src="image/winner/4.jpg" alt="">
+						<img src="image/winner/5.jpg" alt="">
+						<img src="image/winner/6.jpg" alt="">
+						<img src="image/winner/7.jpg" alt="">
+						<img src="image/winner/8.jpg" alt="">
+						<img src="image/winner/9.jpg" alt="">
+						<img src="image/winner/10.jpg" alt="">
+						<img src="image/winner/11.jpg" alt="">
+						<img src="image/winner/12.jpg" alt="">
+						<img src="image/winner/13.jpg" alt="">
+						<img src="image/winner/14.jpg" alt="">
+						<img src="image/winner/15.jpg" alt="">
+						<img src="image/winner/16.jpg" alt="">
+						<img src="image/winner/17.jpg" alt="">
+						<img src="image/winner/18.jpg" alt="">
+						<img src="image/winner/19.jpg" alt="">
+						<img src="image/winner/20.jpg" alt="">
+						<img src="image/winner/21.jpg" alt="">
+						<img src="image/winner/22.jpg" alt="">
+						<img src="image/winner/23.jpg" alt="">
+						<img src="image/winner/24.jpg" alt="">
+						<img src="image/winner/25.jpg" alt="">
+						<img src="image/winner/26.jpg" alt="">
+						<img src="image/winner/27.jpg" alt="">
+						<img src="image/winner/28.jpg" alt="">
+						<img src="image/winner/29.jpg" alt="">
+						<img src="image/winner/30.jpg" alt="">
+						<img src="image/winner/31.jpg" alt="">
+						<img src="image/winner/32.jpg" alt="">
+						<img src="image/winner/33.jpg" alt="">
+						<img src="image/winner/34.jpg" alt="">
+						<img src="image/winner/35.jpg" alt="">
+						<img src="image/winner/36.jpg" alt="">
+						<img src="image/winner/37.jpg" alt="">
+						<img src="image/winner/38.jpg" alt="">
+						<img src="image/winner/39.jpg" alt="">
+						<img src="image/winner/40.jpg" alt="">
+						<img src="image/winner/41.jpg" alt="">
+						<img src="image/winner/42.jpg" alt="">
+						<img src="image/winner/43.jpg" alt="">
+						<img src="image/winner/44.jpg" alt="">
+						<img src="image/winner/45.jpg" alt="">
+						<img src="image/winner/46.jpg" alt="">
+						<img src="image/winner/47.jpg" alt="">
+						<img src="image/winner/48.jpg" alt="">
+						<img src="image/winner/49.jpg" alt="">
+						<img src="image/winner/50.jpg" alt="">
+						<img src="image/winner/51.jpg" alt="">
+						<img src="image/winner/52.jpg" alt="">
+						<img src="image/winner/53.jpg" alt="">
+						<img src="image/winner/54.jpg" alt="">
+						<img src="image/winner/55.jpg" alt="">
+						<img src="image/winner/56.jpg" alt="">
+						<img src="image/winner/57.jpg" alt="">
+						<img src="image/winner/58.jpg" alt="">
+						<img src="image/winner/59.jpg" alt="">
+						<img src="image/winner/60.jpg" alt="">
+						<img src="image/winner/61.jpg" alt="">
+						<img src="image/winner/62.jpg" alt="">
+						<img src="image/winner/63.jpg" alt="">
+						<img src="image/winner/64.jpg" alt="">
+						<img src="image/winner/65.jpg" alt="">
+						<img src="image/winner/66.jpg" alt="">
+						<img src="image/winner/67.jpg" alt="">
+						<img src="image/winner/68.jpg" alt="">
+						<img src="image/winner/69.jpg" alt="">
+						<img src="image/winner/70.jpg" alt="">
+						<img src="image/winner/71.jpg" alt="">
+						<img src="image/winner/72.jpg" alt="">
+						<img src="image/winner/73.jpg" alt="">
+						<img src="image/winner/74.jpg" alt="">
+						<img src="image/winner/75.jpg" alt="">
+						<img src="image/winner/76.jpg" alt="">
+						<img src="image/winner/77.jpg" alt="">
+						<img src="image/winner/78.jpg" alt="">
+					</div>
+				</div>
+
+			</div>	
+
+			<div class="tr4 clearfix">
+				<div class="fix-box">
+					<div id="7" class="coin">
+						<img src="image/light-dark.png" alt="">
+						<img src="image/coin-big-dark.png" alt="">
+						<img src="image/coin-big.png" alt="">
+						<img src="image/coin-big-blue.png" alt="">
+						<img src="image/coin-big-green.png" alt="">
+						<img src="image/coin-big-pink.png" alt="">
+						<img src="image/coin-big-red.png" alt="">
+					</div>
+				</div>
+				
+				<div class="fix-box">
+					<div id="8" class="coin-small">
+						<img src="image/light-dark.png" alt="">
+						<img src="image/coin-small-dark.png" alt="">
+						<img src="image/coin-small.png" alt="">
+						<img src="image/coin-small-blue.png" alt="">
+						<img src="image/coin-small-green.png" alt="">
+						<img src="image/coin-small-pink.png" alt="">
+						<img src="image/coin-small-red.png" alt="">
+					</div>
+				</div>
+				
+				<div class="fix-box">
+					<div id="9" class="once-more-right">
+						<img src="image/light-dark.png" alt="">
+						<img src="image/once-more-dark.png" alt="">
+						<img src="image/once-more.png" alt="">
+						<img src="image/once-more-blue.png" alt="">
+						<img src="image/once-more-green.png" alt="">
+						<img src="image/once-more-pink.png" alt="">
+						<img src="image/once-more-red.png" alt="">
+					</div>
+				</div>
+				
+				<div class="fix-box">
+					<div id="10" class="bomb">
+						<img src="image/light-dark.png" alt="">
+						<img src="image/bomb-big-dark.png" alt="">
+						<img src="image/bomb-big.png" alt="">
+						<img src="image/bomb-big-blue.png" alt="">
+						<img src="image/bomb-big-green.png" alt="">
+						<img src="image/bomb-big-pink.png" alt="">
+						<img src="image/bomb-big-red.png" alt="">
+					</div>
+				</div>
+				
+				<div class="fix-box">
+					<div id="11" class="flag-small">
+						<img src="image/light-dark.png" alt="">
+						<img src="image/flag-small-dark.png" alt="">
+						<img src="image/flag-small.png" alt="">
+						<img src="image/flag-small-blue.png" alt="">
+						<img src="image/flag-small-green.png" alt="">
+						<img src="image/flag-small-pink.png" alt="">
+						<img src="image/flag-small-red.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+
+			<div class="tr5 clearfix">
+				<div class="fix-box">
+					<div id="18" class="barrels">
+						<img src="image/light-dark.png" alt="">
+						<img src="image/Barrels-big-dark.png" alt="">
+						<img src="image/Barrels-big.png" alt="">
+						<img src="image/Barrels-big-blue.png" alt="">
+						<img src="image/Barrels-big-green.png" alt="">
+						<img src="image/Barrels-big-pink.png" alt="">
+						<img src="image/Barrels-big-red.png" alt="">
+					</div>
+				</div>
+				
+				<div class="fix-box">
+					<div id="17" class="barrels-small">
+						<img src="image/light-dark.png" alt="">
+						<img src="image/Barrels-small-dark.png" alt="">
+						<img src="image/Barrels-small.png" alt="">
+						<img src="image/Barrels-small-blue.png" alt="">
+						<img src="image/Barrels-small-green.png" alt="">
+						<img src="image/Barrels-small-pink.png" alt="">
+						<img src="image/Barrels-small-red.png" alt="">
+					</div>
+				</div>
+		
+				<div class="fix-box">
+					<div id="16" class="bomb">
+						<img src="image/light-dark.png" alt="">
+						<img src="image/bomb-big-dark.png" alt="">
+						<img src="image/bomb-big.png" alt="">
+						<img src="image/bomb-big-blue.png" alt="">
+						<img src="image/bomb-big-green.png" alt="">
+						<img src="image/bomb-big-pink.png" alt="">
+						<img src="image/bomb-big-red.png" alt="">
+					</div>
+				</div>
+				
+				<div class="fix-box">
+					<div id="15" class="dimaond">
+						<img src="image/light-dark.png" alt="">
+						<img src="image/dimaond-big-dark.png" alt="">
+						<img src="image/dimaond-big.png" alt="">
+						<img src="image/dimaond-big-blue.png" alt="">
+						<img src="image/dimaond-big-green.png" alt="">
+						<img src="image/dimaond-big-pink.png" alt="">
+						<img src="image/dimaond-big-red.png" alt="">
+					</div>
+				</div>
+				
+				<div class="fix-box">
+					<div id="14" class="dimaond-small">
+						<img src="image/light-dark.png" alt="">
+						<img src="image/dimaond-small-dark.png" alt="">
+						<img src="image/dimaond-small.png" alt="">
+						<img src="image/dimaond-small-blue.png" alt="">
+						<img src="image/dimaond-small-green.png" alt="">
+						<img src="image/dimaond-small-pink.png" alt="">
+						<img src="image/dimaond-small-red.png" alt="">
+					</div>
+				</div>
+				
+				<div class="fix-box">
+					<div id="13" class="rudder">
+						<img src="image/light-dark.png" alt="">
+						<img src="image/rudder-big-dark.png" alt="">
+						<img src="image/rudder-big.png" alt="">
+						<img src="image/rudder-big-blue.png" alt="">
+						<img src="image/rudder-big-green.png" alt="">
+						<img src="image/rudder-big-pink.png" alt="">
+						<img src="image/rudder-big-red.png" alt="">
+					</div>
+				</div>
+				
+				<div class="fix-box">
+					<div id="12" class="flag">
+						<img src="image/light-dark.png" alt="">
+						<img src="image/flag-big-dark.png" alt="">
+						<img src="image/flag-big.png" alt="">
+						<img src="image/flag-big-blue.png" alt="">
+						<img src="image/flag-big-green.png" alt="">
+						<img src="image/flag-big-pink.png" alt="">
+						<img src="image/flag-big-red.png" alt="">
+					</div>
+				</div>
+			</div>
+	</div>
+
+	<div class="footer">
+		<div class="footer-choose">
+			<img src="image/bottom-box1.png" alt="">
+			<div class="bottom-dimaond">
+				<img src="image/light-dark.png" alt="">
+				<img src="image/light-dark.png" alt="">
+				<img src="image/light-dark.png" alt="">
+				<img src="image/light-dark.png" alt="">
+				<img src="image/light-dark.png" alt="">
+				<img src="image/light-dark.png" alt="">
+			</div>
+			<div class="footer-num clearfix">
+				<div class="sec1">
+					<img src="image/dark-8.png" alt="" >
+					<img src="image/0.png" alt="" ">
+				</div>
+				<div class="sec2">
+					<img src="image/dark-8.png" alt="">
+					<img src="image/0.png" alt="">
+				</div>
+				<div class="sec3">
+					<img src="image/dark-8.png" alt="">
+					<img src="image/0.png" alt="">
+				</div>
+				<div class="sec4">
+					<img src="image/dark-8.png" alt="">
+					<img src="image/0.png" alt="">
+				</div>
+				<div class="sec5">
+					<img src="image/dark-8.png" alt="">
+					<img src="image/0.png" alt="">
+				</div>
+				<div class="sec6">
+					<img src="image/dark-8.png" alt="">
+					<img src="image/0.png" alt="">
+				</div>
+				<div class="sec7">
+					<img src="image/dark-8.png" alt="">
+					<img src="image/0.png" alt="">
+				</div>
+				<div class="sec8">
+					<img src="image/dark-8.png" alt="">
+					<img src="image/0.png" alt="">
+				</div>
+			</div>
+			<div class="footer-icon clearfix">
+				<div class="bet1" id="b1"><img src="image/BAR.png" alt=""></div>
+				<div class="bet2" id="b2"><img src="image/dimaond.png" alt=""></div>
+				<div class="bet3" id="b3"><img src="image/box.png" alt=""></div>
+				<div class="bet4" id="b4"><img src="image/coin.png" alt=""></div>
+				<div class="bet5" id="b5"><img src="image/rudder.png" alt=""></div>
+				<div class="bet6" id="b6"><img src="image/barrels.png" alt=""></div>
+				<div class="bet7" id="b7"><img src="image/flag.png" alt=""></div>
+				<div class="bet8" id="b8"><img src="image/bomb.png" alt=""></div>
+			</div>
+		</div>
+
+		<div class="footer-btn" >
+			
+			<input type="image" src="image/big2.png" class="bottom-btn big" style="outline:none">
+			<input type="image" src="image/small2.png" class="bottom-btn small" style="outline:none">
+			<input type="image" src="image/score2.png" class="bottom-btn score" style="outline:none">
+			<input type="image" src="image/auto2.png" class="bottom-btn auto"  style="outline:none">
+			<input type="image" src="image/start2.png" class="bottom-btn start" style="outline:none">
+		</div>
+
+		<audio src="sound/CLICK.WAV" id="sound1"></audio>
+	    <audio src="sound/run.mp3" id="sound9"></audio>
+	    <audio src="sound/BIGWIN.mp3" id="sound10"></audio>
+	    <audio src="sound/run-loop.mp3" id="sound11"></audio>
+	</div>
+	<div class="play"></div>
+	<div class="play1"></div>
+	<div class="play2"></div>
+	<script src="js/main.js"></script>
+</body>
+</html>
